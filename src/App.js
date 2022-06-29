@@ -23,6 +23,11 @@ const UserProfiles = () => {
     return (
       <div key={index}>
         {/* todo: profile image */}
+        {userProfile.userProfileId ? (
+          <img
+            src={`http://localhost:8080/user-profile/image/download/v1/${userProfile.userProfileId}`}>
+          </img>
+        ) : null}
         <br />
         <br />
         <h1>{userProfile.username}</h1>
